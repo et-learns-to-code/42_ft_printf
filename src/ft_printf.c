@@ -6,7 +6,7 @@
 /*   By: etien <etien@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 10:20:29 by etien             #+#    #+#             */
-/*   Updated: 2024/06/26 16:58:55 by etien            ###   ########.fr       */
+/*   Updated: 2024/06/26 17:10:48 by etien            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,27 +38,20 @@ int	ft_printf(const char *format, ...)
 static int	ft_specifier(char c, va_list ap)
 {
 	if (c == 'c')
-		return ft_print_char(ap);
+		return (ft_print_char(ap));
 	if (c == 's')
-		return ft_print_string(ap);
+		return (ft_print_string(ap));
 	if (c == 'p')
-		return ft_print_pointer(ap);
+		return (ft_print_pointer(ap));
 	if (c == 'd' || c == 'i')
-		return ft_print_int(ap);
+		return (ft_print_int(ap));
 	if (c == 'u')
-		return ft_print_unsigned(ap);
+		return (ft_print_unsigned(ap));
 	if (c == 'x')
-		return ft_print_lowerhex(ap);
+		return (ft_print_lowerhex(ap));
 	if (c == 'X')
-		return ft_print_upperhex(ap);
+		return (ft_print_upperhex(ap));
 	else if (c == '%')
-		return ft_print_percent(ap);
+		return (ft_print_percent(ap));
 	return (write(1, &c, 1));
 }
-
-
-// void main()
-// {
-// 	//ft_printf()
-// 	printf("Hello, %s", "world");
-// }
