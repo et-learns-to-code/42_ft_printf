@@ -6,7 +6,7 @@
 /*   By: etien <etien@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 13:43:13 by etien             #+#    #+#             */
-/*   Updated: 2024/06/26 16:15:52 by etien            ###   ########.fr       */
+/*   Updated: 2024/06/26 16:59:37 by etien            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int	ft_print_int(va_list ap)
 	long long	n;
 	int			sign;
 
+	sign = 0;
 	n = va_arg(ap, int);
 	if (n < 0)
 	{

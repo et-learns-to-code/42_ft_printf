@@ -6,11 +6,13 @@
 /*   By: etien <etien@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 10:20:29 by etien             #+#    #+#             */
-/*   Updated: 2024/06/26 14:58:18 by etien            ###   ########.fr       */
+/*   Updated: 2024/06/26 16:58:55 by etien            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
+
+static int	ft_specifier(char c, va_list ap);
 
 int	ft_printf(const char *format, ...)
 {

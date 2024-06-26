@@ -1,18 +1,26 @@
 NAME = libftprintf.a
 
 SRC_DIR = src/
-INC_DIR = include/
-UTIL_DIR = util/
+INC_DIR = includes/
+UTILS_DIR = utils/
 
 SRC = $(addprefix $(SRC_DIR), \
-		ft_printf.c) \
+		ft_printf.c \
+		ft_print_char.c \
+		ft_print_hex.c \
+		ft_print_int.c \
+		ft_print_percent.c \
+		ft_print_pointer.c \
+		ft_print_string.c \
+		ft_print_unsigned.c)
 
-UTIL = $(addprefix $(UTIL_DIR), \
-ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c)
+UTILS = $(addprefix $(UTILS_DIR), \
+		ft_putnbr_base.c \
+		ft_strlen.c)
 
 OBJ = ${SRC:.c=.o}
 
-OBJ_UTIL = ${UTIL:.c=.o}
+OBJ_UTILS = ${UTILS:.c=.o}
 
 CC = gcc
 
@@ -26,14 +34,14 @@ RM = rm -f
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(OBJ_UTIL)
-	$(AR) $(NAME) $(OBJ) $(OBJ_UTIL)
+$(NAME): $(OBJ) $(OBJ_UTILS)
+	$(AR) $(NAME) $(OBJ) $(OBJ_UTILS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJ) $(OBJ_UTIL)
+	$(RM) $(OBJ) $(OBJ_UTILS)
 
 fclean: clean
 	$(RM) $(NAME)
