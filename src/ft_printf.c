@@ -6,7 +6,7 @@
 /*   By: etien <etien@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 10:20:29 by etien             #+#    #+#             */
-/*   Updated: 2024/06/26 17:10:48 by etien            ###   ########.fr       */
+/*   Updated: 2024/06/26 17:39:33 by etien            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,19 +39,19 @@ static int	ft_specifier(char c, va_list ap)
 {
 	if (c == 'c')
 		return (ft_print_char(ap));
-	if (c == 's')
+	else if (c == 's')
 		return (ft_print_string(ap));
-	if (c == 'p')
+	else if (c == 'p')
 		return (ft_print_pointer(ap));
-	if (c == 'd' || c == 'i')
+	else if (c == 'd' || c == 'i')
 		return (ft_print_int(ap));
-	if (c == 'u')
+	else if (c == 'u')
 		return (ft_print_unsigned(ap));
-	if (c == 'x')
+	else if (c == 'x')
 		return (ft_print_lowerhex(ap));
-	if (c == 'X')
+	else if (c == 'X')
 		return (ft_print_upperhex(ap));
 	else if (c == '%')
-		return (ft_print_percent(ap));
+		return (write(1, "%", 1));
 	return (write(1, &c, 1));
 }

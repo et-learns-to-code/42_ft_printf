@@ -6,7 +6,7 @@
 /*   By: etien <etien@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 13:44:32 by etien             #+#    #+#             */
-/*   Updated: 2024/06/26 17:00:12 by etien            ###   ########.fr       */
+/*   Updated: 2024/06/26 17:45:58 by etien            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ int	ft_print_unsigned(va_list ap)
 	unsigned int	n;
 
 	n = va_arg(ap, unsigned int);
-	return (ft_putnbr_base(n, "0123456789"));
+	return (ft_putnbr_base(n, DEC));
 }

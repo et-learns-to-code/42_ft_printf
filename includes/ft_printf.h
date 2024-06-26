@@ -6,7 +6,7 @@
 /*   By: etien <etien@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 10:14:42 by etien             #+#    #+#             */
-/*   Updated: 2024/06/26 17:09:37 by etien            ###   ########.fr       */
+/*   Updated: 2024/06/26 17:45:21 by etien            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,14 @@
 # include <stdlib.h>
 # include <stdarg.h>
 
+# define DEC "0123456789"
+# define HEX "0123456789abcdef"
+# define HEX_U "0123456789ABCDEF"
+
 int		ft_printf(const char *format, ...);
 int		ft_print_char(va_list ap);
 int		ft_print_int(va_list ap);
 int		ft_print_lowerhex(va_list ap);
-int		ft_print_percent(void);
 int		ft_print_pointer(va_list ap);
 int		ft_print_string(va_list ap);
 int		ft_print_unsigned(va_list ap);

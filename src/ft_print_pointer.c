@@ -6,7 +6,7 @@
 /*   By: etien <etien@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 13:43:59 by etien             #+#    #+#             */
-/*   Updated: 2024/06/26 16:51:00 by etien            ###   ########.fr       */
+/*   Updated: 2024/06/26 17:45:43 by etien            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ int	ft_print_pointer(va_list ap)
 
 	n = (unsigned long long) va_arg(ap, void *);
 	write(1, "0x", 2);
-	return (ft_putnbr_base(n, "0123456789abcdef") + 2);
+	return (ft_putnbr_base(n, HEX) + 2);
 }
