@@ -6,7 +6,7 @@
 /*   By: etien <etien@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 10:20:29 by etien             #+#    #+#             */
-/*   Updated: 2024/06/26 17:39:33 by etien            ###   ########.fr       */
+/*   Updated: 2024/06/26 17:52:37 by etien            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,6 @@ static int	ft_specifier(char c, va_list ap)
 		return (ft_print_upperhex(ap));
 	else if (c == '%')
 		return (write(1, "%", 1));
-	return (write(1, &c, 1));
+	else
+		return (write(1, &c, 1));
 }
