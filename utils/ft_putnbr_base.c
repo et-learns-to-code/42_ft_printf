@@ -6,7 +6,7 @@
 /*   By: etien <etien@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 14:02:32 by etien             #+#    #+#             */
-/*   Updated: 2024/06/26 17:58:27 by etien            ###   ########.fr       */
+/*   Updated: 2024/06/27 10:45:56 by etien            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 // long long data type is guaranteed to be at least 8 bytes (64 bits)
 // on all platforms supported by C99 and later standards.
 // unsigned long long can hold any value that size_t can represent.
+// Converts a number to a given base and prints it out to stdout,
+// before returning the number of characters printed.
 int	ft_putnbr_base(unsigned long long n, const char *base_str)
 {
 	int					count;

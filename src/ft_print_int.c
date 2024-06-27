@@ -6,13 +6,14 @@
 /*   By: etien <etien@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 13:43:13 by etien             #+#    #+#             */
-/*   Updated: 2024/06/26 17:45:36 by etien            ###   ########.fr       */
+/*   Updated: 2024/06/27 10:50:22 by etien            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-// long long can hold all values of int so no typecasting is necessary
+// long long can hold all values of int so no typecasting is necessary.
+// Prints a decimal (base 10) number / an integer in base 10.
 int	ft_print_int(va_list ap)
 {
 	long long	n;

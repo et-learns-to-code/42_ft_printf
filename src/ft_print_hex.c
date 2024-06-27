@@ -6,12 +6,13 @@
 /*   By: etien <etien@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 13:44:58 by etien             #+#    #+#             */
-/*   Updated: 2024/06/26 17:45:29 by etien            ###   ########.fr       */
+/*   Updated: 2024/06/27 10:41:03 by etien            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
+// Prints a number in hexadecimal (base 16) lowercase format.
 int	ft_print_lowerhex(va_list ap)
 {
 	unsigned int	n;
@@ -20,6 +21,7 @@ int	ft_print_lowerhex(va_list ap)
 	return (ft_putnbr_base(n, HEX));
 }
 
+// Prints a number in hexadecimal (base 16) uppercase format.
 int	ft_print_upperhex(va_list ap)
 {
 	unsigned int	n;

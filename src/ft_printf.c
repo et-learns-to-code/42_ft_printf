@@ -6,7 +6,7 @@
 /*   By: etien <etien@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 10:20:29 by etien             #+#    #+#             */
-/*   Updated: 2024/06/26 17:52:37 by etien            ###   ########.fr       */
+/*   Updated: 2024/06/27 10:48:23 by etien            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 static int	ft_specifier(char c, va_list ap);
 
+// Primary function that initializes and wipes the variadic arguments.
 int	ft_printf(const char *format, ...)
 {
 	va_list	ap;
@@ -35,6 +36,8 @@ int	ft_printf(const char *format, ...)
 	return (count);
 }
 
+// Controller function that determines the specifier after % to
+// call the relevant function to process the output.
 static int	ft_specifier(char c, va_list ap)
 {
 	if (c == 'c')
